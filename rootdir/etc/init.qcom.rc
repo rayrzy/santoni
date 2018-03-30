@@ -407,11 +407,11 @@ on property:sys.boot_completed=1
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
 
-on property:persist.radio.atfwd.start=false
-    stop atfwd
+on property:persist.vendor.radio.atfwd.start=false
+    stop vendor.atfwd
 
-on property:radio.atfwd.start=false
-    stop atfwd
+on property:vendor.radio.atfwd.start=false
+    stop vendor.atfwd
 
 # corefile limit
 on property:persist.debug.trace=1
