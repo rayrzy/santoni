@@ -76,8 +76,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcompostprocbundle \
-    tinymix
+    libqcompostprocbundle
 
 # ANT
 PRODUCT_PACKAGES += \
