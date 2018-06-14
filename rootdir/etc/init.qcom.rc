@@ -159,7 +159,7 @@ on boot
     chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
     # Create hvdcp_opti directory
-    mkdir /persist/hvdcp_opti 0770 root system
+    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
 
 on post-fs
 # msm specific files that need to be created on /data
