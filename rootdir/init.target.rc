@@ -188,13 +188,6 @@ on charger
     start vendor.hvdcp_opti
 
 on boot
-    write /dev/cpuset/audio-app/cpus 0-1
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/top-app/boost/cpus 4-7
-    write /dev/cpuset/foreground/cpus 0-6
-    write /dev/cpuset/foreground/boost/cpus 0-6
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
 
 # add a cpuset for the camera daemon
     mkdir /dev/cpuset/camera-daemon
