@@ -417,7 +417,6 @@ PRODUCT_PACKAGES += \
     libcld80211 \
     libwpa_client \
     hostapd \
-    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
