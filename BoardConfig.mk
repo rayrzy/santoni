@@ -156,7 +156,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware
+    /vendor/firmware_mnt:/firmware \
+    /mnt/vendor/persist:/persist
 
 # FM
 BOARD_HAVE_QCOM_FM := true
