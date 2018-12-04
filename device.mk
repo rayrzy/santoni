@@ -238,7 +238,7 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager
+    ims-ext-common
 
 # Input
 PRODUCT_COPY_FILES += \
