@@ -143,10 +143,12 @@ on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown system system /sys/module/msm_core/parameters/polling_interval
     chown system system /sys/module/msm_core/parameters/disabled
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chown system system /sys/kernel/debug/msm_core/enable
     chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
     chmod 0660 /sys/module/bluetooth_power/parameters/power
+    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
 	
     chown system system /sys/class/power_supply/battery/charging_enabled
     chmod 0666 /sys/class/power_supply/battery/charging_enabled
@@ -381,9 +383,6 @@ on post-fs-data
 
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
-
-on property:hw.fm.init=*
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
 
 service ssr_setup /system/bin/ssr_setup
     oneshot
