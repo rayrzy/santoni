@@ -38,6 +38,9 @@ TARGET_KERNEL_CONFIG := santoni_treble_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 TARGET_KERNEL_VERSION := 3.18
 
+# ANT
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+
 # Audio
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 AUDIO_FEATURE_ENABLED_HIFI_AUDIO := true
