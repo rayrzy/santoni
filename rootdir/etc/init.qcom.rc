@@ -459,7 +459,6 @@ on property:bluetooth.startbtsnoop=false
     stop btsnoop
 
 on property:vold.decrypt=trigger_restart_framework
-    start config_bt_addr
     start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
