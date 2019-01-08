@@ -193,6 +193,7 @@ on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     start vendor.hvdcp_opti
+    start vendor.power_off_alarm
 
 on boot
 service ppd /vendor/bin/mm-pp-dpps
