@@ -47,13 +47,6 @@ on init
     # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
 
-    # Create cgroup mount point for memory
-    mkdir /sys/fs/cgroup/memory/bg 0750 root system
-    write /sys/fs/cgroup/memory/bg/memory.swappiness 140
-    write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
-    chown root system /sys/fs/cgroup/memory/bg/tasks
-    chmod 0660 /sys/fs/cgroup/memory/bg/tasks
-
     # Set permissions for persist partition
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
