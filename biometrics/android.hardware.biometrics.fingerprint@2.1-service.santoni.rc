@@ -39,6 +39,11 @@ on boot
     setprop persist.sys.fp.vendor none
     start vendor.gx_fpd
 
+service goodix_script /vendor/bin/init.goodix.sh
+    class late_start
+    user system
+    oneshot
+
 on property:persist.sys.fp.vendor=switchf
     stop vendor.gx_fpd
     setprop persist.sys.fp.vendor searchf
