@@ -48,6 +48,9 @@
 /sys/devices(/platform)?/soc/leds-qpnp-[0-9]+/leds(/.*)?                                u:object_r:sysfs_leds:s0
 /sys/devices(/platform)?/soc/soc:gpio-leds/leds(/.*)?                                   u:object_r:sysfs_leds:s0
 
+# LiveDisplay HAL
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.santoni u:object_r:hal_lineage_livedisplay_qti_exec:s0
+
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
 
