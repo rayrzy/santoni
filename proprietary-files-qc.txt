@@ -652,6 +652,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|038f43076908b1a704ba3507fc3a971e81fa5a99
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f716dbcead5e10a7944d4842ee6f0c6dfdf52a3e
 
+# VNDK
+vendor/lib/vndk-sp/libcutils.so|846d5769b71abca5b8fa185d4cf83a5cf1afed3c
+vendor/lib/vndk/libprocessgroup.so|d2b88fec1e836193252456335e93afe058d84515
+
 # Wi-Fi - onc-user-10-QKQ1.191008.001-V11.0.1.0.QFLCNXM-release-keys
 vendor/bin/wcnss_service|508f3a8ab26414cc16bf607f2ce3bbbb94f8228b
 
