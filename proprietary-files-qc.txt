@@ -46,16 +46,12 @@ vendor/lib64/libadiertac.so|87302b3eaa3bb2465c3823d5f9089f3030d9a7a5
 vendor/lib64/libaudcal.so|6964ecc9607ae9c05ee7b37cbff66c0b37bde216
 vendor/lib64/libaudioalsa.so|af924f5a37d3066a97175f1343ea5c9484689ee3
 vendor/lib64/libqtigef.so|e7f0dfa3cd7252310c9a01f2bc0e4074e6e78871
-vendor/lib64/soundfx/libqcbassboost.so|2c8fa391bd6942db174a3e59d92909b403acdc26
-vendor/lib64/soundfx/libqcreverb.so|e4f94bdb72ccfee9c505beb8042ca004d1faad5f
-vendor/lib64/soundfx/libqcvirt.so|55ff24260ade41d17365a196e8c3ee7950cbd8ee
 vendor/lib64/soundfx/libshoebox.so|cfc916d9a1ee617c248f784359df41a95d3b820a
 
 # Audiosphere - from LA.UM.8.6.r1-04700-89xx.0
 etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
 framework/audiosphere.jar|c1679f5aca56f0cb24745b3f7d219acd04833bed
 vendor/lib/soundfx/libasphere.so|4d0ccf1c282bb70619d20bf7d79021dc3815a579
-vendor/lib64/soundfx/libasphere.so|eb86db6f0f91e9d7c76dc8e4fc63124922e6aed3
 
 # Bluetooth - from LA.UM.8.6.r1-04700-89xx.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063d4838548e0f3546b509ece621e5f97b51bed0
