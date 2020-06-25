@@ -64,7 +64,6 @@ vendor/lib64/soundfx/libqcvirt.so|55ff24260ade41d17365a196e8c3ee7950cbd8ee
 vendor/lib64/soundfx/libshoebox.so|cfc916d9a1ee617c248f784359df41a95d3b820a
 
 # Bluetooth - from onc-user-10-QKQ1.191008.001-V11.0.1.0.QFLCNXM-release-keys
--lib64/libbtconfigstore.so|88d584d582a8822af6c0f4a6e00446e6dbae06d1
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|535491e4a8036125259bab4579a53cadcb08dcc3
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|805029b02176dea2a3937f44783dc2bb1cb9f85a
