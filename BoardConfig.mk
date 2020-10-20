@@ -175,9 +175,6 @@ HWUI_COMPILE_FOR_PERF := true
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_santoni
 TARGET_RECOVERY_DEVICE_MODULES := libinit_santoni
 
-# Keystore
-TARGET_PROVIDES_KEYMASTER := true
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
