@@ -83,3 +83,9 @@ CAMERA2_SENSOR_MODULES="${AOSP_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${CAMERA2_SENSOR_MODULES}"
 
 "${MY_DIR}"/setup-makefiles.sh
+
+# Camera graphicbuffer shim
+patchelf --add-needed libui_shim.so  "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera_ppeiscore.so
+
+# IMS GraphicBuffer shim
+patchelf --add-needed libvt_shim.so "${DEVICE_BLOB_ROOT}"/product/lib64/lib-imsvideocodec.so
