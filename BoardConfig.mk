@@ -38,6 +38,8 @@ TARGET_KERNEL_CONFIG := santoni_treble_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/santoni
 TARGET_KERNEL_VERSION := 3.18
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
