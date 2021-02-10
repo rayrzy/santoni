@@ -34,7 +34,6 @@ vendor/lib/libaudcal.so|dda994bbd37d3c178120791a911fb219a2ccb5ca
 vendor/lib/libaudioalsa.so|1c0615d720024b5bd7ac28bec13d37ab7102b57f
 vendor/lib/libdrc.so|55fc13d205ce3199de2cf1f9c1dab479909c15be
 vendor/lib/libqtigef.so|5630df4e52109c0602d441d5d63bd342d202faf4
-vendor/lib/soundfx/libshoebox.so|538dc7ed2d3066ca956a1722e147808f96c0224b
 vendor/lib/libsurround_3mic_proc.so|aac9411dc243dfee813be038969c5337fe36b1ca
 vendor/lib/soundfx/libqcbassboost.so|5a958a54274211ba37a80df1007ea9ccab956e61
 vendor/lib/soundfx/libqcreverb.so|f4f2daa28161b2e8ebe3402cbb94f898b7210371
@@ -46,7 +45,6 @@ vendor/lib64/libadiertac.so|87302b3eaa3bb2465c3823d5f9089f3030d9a7a5
 vendor/lib64/libaudcal.so|6964ecc9607ae9c05ee7b37cbff66c0b37bde216
 vendor/lib64/libaudioalsa.so|af924f5a37d3066a97175f1343ea5c9484689ee3
 vendor/lib64/libqtigef.so|e7f0dfa3cd7252310c9a01f2bc0e4074e6e78871
-vendor/lib64/soundfx/libshoebox.so|cfc916d9a1ee617c248f784359df41a95d3b820a
 
 # Audiosphere - from LA.UM.8.6.r1-04700-89xx.0
 etc/permissions/audiosphere.xml|3c6d8f14bd99e52a424282fd5d0a5b9b06485dea
