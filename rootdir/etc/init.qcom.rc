@@ -546,12 +546,6 @@ service qmuxd /system/bin/qmuxd
     user root
     group radio audio bluetooth gps nfc diag
 
-service vendor.sensors /vendor/bin/sscrpcd
-    class core
-    user system
-    group system
-    disabled
-
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
