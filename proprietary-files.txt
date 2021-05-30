@@ -1545,14 +1545,14 @@ etc/qdcm_calib_data_hx8394F_HD720p_video_BOE.xml:vendor/etc/qdcm_calib_data_hx83
 etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg.xml:vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg.xml
 etc/qdcm_calib_data_ili9881c_HD720p_video_EbbgDJN.xml:vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_EbbgDJN.xml
 
-# Fingerprint
-bin/gx_fpd:vendor/bin/gx_fpd
-lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so
-lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so
-lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
-lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
-lib64/libfp_client.so:vendor/lib64/libfp_client.so
-lib64/libfpservice.so:vendor/lib64/libfpservice.so
+# Fingerprint - from santoni MIUI Nougat
+vendor/bin/gx_fpd
+vendor/lib64/hw/fingerprint.msm8937.so
+vendor/lib64/hw/fingerprint.goodix.so
+vendor/lib64/hw/gxfingerprint.default.so
+vendor/lib64/libcom_fingerprints_service.so
+vendor/lib64/libfp_client.so
+vendor/lib64/libfpservice.so
 
 # Graphics firmware
 etc/firmware/a225p5_pm4.fw:vendor/firmware/a225p5_pm4.fw
