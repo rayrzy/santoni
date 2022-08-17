@@ -140,11 +140,6 @@ vendor/lib64/vendor.qti.latency@2.0.so|20a3037a1aea98f5f490b14c8f5620d2d3a0cf57
 # Charger - from LA.UM.8.6.r1-04700-89xx.0
 vendor/bin/hvdcp_opti|72caa940cb12ee5e615eada949fd4e635971ad4e
 
-# Dirac
-vendor/etc/diracmobile.config
-vendor/lib/libDiracAPI_SHARED.so
-vendor/lib/soundfx/libdirac.so
-
 # DPM - from LA.UM.8.6.r1-04700-89xx.0
 product/bin/dpmd|6c511e3e4293705777b563b45d7c216207a6ead0
 product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
