@@ -320,9 +320,9 @@ vendor/lib64/libtinyxml2_1.so|56d4d5d0ea010f951de219c7b9fd2c9695a5b9d2
 vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8937.so|ea355b9a9fe86ef24be6a8ce5399fcf40f551ec8
 vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8937.so|5c0ecea99878e67ddf733ac338ac9c8bce0b4f84
 
-# Graphics firmware - from onc-user-10-QKQ1.191008.001-V11.0.1.0.QFLCNXM-release-keys
+# Graphics firmware - from onc-user 10 QKQ1.191008.001 V12.5.3.0.QFLCNXM release-keys
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
-vendor/firmware/a530_pfp.fw|d027c70fde64241ec13160d09ee1b6c272974a4b
+vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 vendor/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
 vendor/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
@@ -334,14 +334,6 @@ vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 # Keystore - from LA.UM.8.6.r1-04700-89xx.0
 vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8937.so|ff8b4bb3b6f3a7252faeb1ed647bc3c4fc684623
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|1c0fd8bfd45877c40b72aa2714055cddd2104133
-
-# Keymaster - from onc-user-10-QKQ1.191008.001-V11.0.1.0.QFLCNXM-release-keys
-vendor/lib/libkeymasterutils.so|19db673f1ac818c86bae88e35a27c789b16c320f
-vendor/lib/libkeymasterprovision.so|fe3d802f42586488f1c758d944441e22e317eb27
-vendor/lib/libkeymasterdeviceutils.so|4f6f530e75402d1125378c55a681232a539e7f5b
-vendor/lib64/libkeymasterutils.so|9076de59a149bd41a01389938c2a2f907f6bc035
-vendor/lib64/libkeymasterprovision.so|0bcafa38b0aeef10174ecec7e74bac3f4b0e21f8
-vendor/lib64/libkeymasterdeviceutils.so|586b9f8b4ba3c9f947f656d6f2a2a8152bad8dfa
 
 # Listen - from LA.UM.8.6.r1-04700-89xx.0
 vendor/lib/hw/sound_trigger.primary.msm8953.so:vendor/lib/hw/sound_trigger.primary.msm8937.so|53425351a1e5845ae4aafaf2db8206a801aa25a0
@@ -403,16 +395,6 @@ vendor/lib/libqti-util.so|5baec080c5c5c26778d2242bfc0e570ca92b7724
 vendor/lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
 vendor/lib/vendor.qti.hardware.perf@2.0.so|71592601eed5e022f4979293d68deb98e688a3d4
 vendor/lib/vendor.qti.hardware.perf@2.1.so|d8241e46de9fe70d381bbacbe9f8d1e9615b336b
-
-# Perf (IOP) - from onc-user-10-QKQ1.191008.001-V11.0.1.0.QFLCNXM-release-keys
-vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|66b6f5fea48c2c27ae489c31a457e99671e3b1c5
-vendor/lib/libqti-iopd-client.so|a36d5e78c79a842b16091f7cad6172e0cecb2e4c
-vendor/lib/vendor.qti.hardware.iop@1.0.so|01b2e5d6079e229963391e3eb7b38c8a64cd4bf7
-vendor/lib/vendor.qti.hardware.iop@2.0.so|c5643adaa05bea601a7d118c6fbc2ef85cba2cb2
-vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|75a8f66b37e16e9fa0de621fa9c49b19c21c7059
-vendor/lib64/libqti-iopd-client.so|4c19b98b500ac56b7a53a21ddffa50c519e41b2b
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|a0020360bceec31b2bcaceb29a87c82689c90758
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|63e860683c6b090d66e209f0d56bef9583584d75
 
 # Peripheral manager - from LA.UM.8.6.r1-04700-89xx.0
 vendor/bin/pm-proxy|2ac2d0e897ccb4c9a96b6a4cd3d66c2ef66c5b61
