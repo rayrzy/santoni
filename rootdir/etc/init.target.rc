@@ -28,15 +28,13 @@
 #
 
 on early-init
-    mkdir /firmware 0771 system system
-    mkdir /system 0777 root root
-    mkdir /dsp 0771 media media
+    write /proc/sys/kernel/sched_boost 1
 
 on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all /vendor/etc/fstab.qcom
-    swapon_all /vendor/etc/fstab.qcom
 
-    setprop sys.usb.ffs.aio_compat 1
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
@@ -52,9 +50,13 @@ on init
     write /dev/cpuset/camera-daemon/mems 0
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
+
+on post-fs
+    start vendor.qseecomd
+    wait_for_prop vendor.sys.listeners.registered true
+    write /dev/ipa 1
    
 on post-fs-data
-
 #Create folder for mm-qcamera-daemon
 mkdir /data/vendor/qcam/ 0770 camera camera
 
@@ -80,11 +82,6 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service qfp-daemon /system/bin/qfp-daemon
-    class late_start
-    user system
-    group system drmrpc
-
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
 
@@ -92,43 +89,10 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
     stop vendor.ims_rtp_daemon
 
-# Allow usb charging to be disabled peristently
-on property:persist.usb.chgdisabled=1
-    write /sys/class/power_supply/battery/charging_enabled 0
-
-on property:persist.usb.chgdisabled=0
-    write /sys/class/power_supply/battery/charging_enabled 1
-
-service qrngd /system/bin/qrngd -f
-    class main
-    user root
-    group root
-
-service qrngp /system/bin/qrngp -f
-    class main
-    user root
-    group root
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start qrngp
-
 service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
-
-on property:vendor.sys.listeners.registered=*
-    setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
-    setprop vendor.sys.keymaster.loaded ${vendor.sys.listeners.registered}
-
-service perfd /vendor/bin/perfd
-    class late_start
-    user root
-    group root
-    socket perfd seqpacket 0666 root system
     writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /vendor/bin/thermal-engine
@@ -146,22 +110,11 @@ service adsprpcd /vendor/bin/adsprpcd
     user media
     group media
 
-service audiod /vendor/bin/audiod
-    class late_start
-    user system
-    group system
-
 service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
     group system wifi radio
     oneshot
-
-service hbtp /vendor/bin/hbtp_daemon
-    class main
-    user system
-    group system
-    disabled
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
@@ -186,16 +139,31 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     user root
     group system wakelock
 
+service energy-awareness /vendor/bin/energy-awareness
+    class main
+    user root
+    group system
+    oneshot
+
 on charger
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
     start vendor.hvdcp_opti
     start vendor.power_off_alarm
+    start thermal-engine
 
 on boot
+# Update cpusets on boot and we want better load balancing
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+
+# access permission for wlan
+    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
+
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
     user system
