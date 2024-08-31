@@ -1,2 +1,2 @@
-#Spectrum
-type spectrum_prop, property_type;
+# Camera
+type vendor_camera_prop, property_type;
