@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_santoni.mk
+    $(LOCAL_DIR)/qassa_santoni.mk
